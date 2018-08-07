@@ -11,7 +11,7 @@ class App extends Component {
     this.performSearch('wonder')
     this.state = {}
     this.searchHandler = this.searchHandler.bind(this)
-    this.handleKeyPress = this.handleKeyPress.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   performSearch(searchTerm) {
@@ -53,7 +53,7 @@ class App extends Component {
     this.performSearch(searchTerm)
   }
 
-  handleKeyPress (e) {
+  handleSubmit (e) {
     const searchTerm = e.target.value
     if (e.key === 'Enter') {
       this.performSearch(searchTerm)
@@ -64,7 +64,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header />
-        <input className="search" onChange={this.searchHandler} onKeyPress={this.handleKeyPress} placeholder="Search movies..." />
+        <input className="search" onChange={this.searchHandler} onSubmit={this.handleSubmit} placeholder="Search movies..." />
         <main className="main">
           {this.state.rows}
         </main>
