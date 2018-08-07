@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import {Header} from './components/Header.js'
-import { Input } from './components/Input';
 import  MovieRow from './components/MovieRow';
 require('dotenv').config()
 
@@ -9,15 +8,16 @@ class App extends Component {
   constructor(props) {
 
     super(props)
-    this.performSearch()
+    this.performSearch('wonder')
     this.state = {}
+    this.searchHandler = this.searchHandler.bind(this)
 
   }
 
-  performSearch() {
+  performSearch(searchTerm) {
 
     const api_key = process.env.REACT_APP_API_KEY
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=Fight+Club`
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${searchTerm}`
 
     return fetch(url)
             .then(data => data.json())
@@ -39,11 +39,16 @@ class App extends Component {
             .catch(error => console.warn(error))
   }
 
+  searchHandler (e) {
+    const searchTerm = e.target.value
+    this.performSearch(searchTerm)
+  }
+
   render() {
     return (
       <React.Fragment>
         <Header />
-        <Input />
+        <input onChange={this.searchHandler} placeholder="Search movies..." />
         <main className="main">
           {this.state.rows}
         </main>

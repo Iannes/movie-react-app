@@ -25,6 +25,9 @@ header {
   background: black;
   padding: 10px;
   color: white;
+  position: fixed;
+  z-index: 9;
+  top: 0;
 }
 
 header img {
@@ -47,6 +50,9 @@ input {
   line-height: 26px;
   padding: 10px;
   padding-left: 33px;
+  position: fixed;
+  top: 85px;
+  z-index: 1;
 }
 
 input:focus {
@@ -54,6 +60,8 @@ input:focus {
 }
 
 main.main {
+  position: relative;
+  top: 200px;
   width: 65%;
   margin: auto;
 }
