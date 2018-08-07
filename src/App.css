@@ -18,7 +18,12 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 }
 
 body {
-  background: #eee;
+  background: rgba(84, 107, 83, 0.6);
+}
+@media screen and (max-width: 890px) {
+ body {
+  background: rgba(6, 6, 6, 0.6);
+}
 }
 
 header {
@@ -77,6 +82,7 @@ input[type="button"] {
   transition: all .4s ease-in-out;
   border: 1px solid grey;
   background: white;
+  outline: 0;
 }
 
 input[type="button"]:hover {
@@ -90,6 +96,7 @@ main.main {
   top: 200px;
   width: 60%;
   margin: auto;
+  max-width: 1020px;
 }
 
 @media screen and (max-width: 890px) {
@@ -107,6 +114,17 @@ main.main {
   padding: 40px;
   background-color: #fff;
   border-radius: 9px;
+  -webkit-box-shadow: 3px 3px 10px 2px rgba(70, 64, 64, 0.2509803);
+  -moz-box-shadow: 3px 3px 10px 2px rgba(70, 64, 64, 0.2509803);
+  box-shadow: 3px 3px 10px 2px rgba(70, 64, 64, 0.2509803);
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+@media screen and (min-width: 1150px) {
+  .movieRow:hover {
+    transform: translateY(-10px);
+  }
 }
 
 @media screen and (max-width: 890px) {
