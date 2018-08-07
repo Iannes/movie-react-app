@@ -27,7 +27,11 @@ class App extends Component {
               // map throught results
               if(results) {
                 results.map(movie => {
-                   movie.poster_src = `https://image.tmdb.org/t/p/w185${movie.poster_path}`
+                  if(movie.poster_path){
+                    movie.poster_src = `https://image.tmdb.org/t/p/w185${movie.poster_path}`
+                  } else {
+                    movie.poster_src = ''
+                  }
                   // pass movie props
                   const movieRow = <MovieRow key={movie.id} movie = {movie} />
                   // push into array
