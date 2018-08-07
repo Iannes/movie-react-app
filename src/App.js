@@ -54,6 +54,7 @@ class App extends Component {
   }
 
   handleSubmit (e) {
+    e.preventDefault();
     const searchTerm = e.target.value
     if (e.key === 'Enter') {
       this.performSearch(searchTerm)
@@ -64,7 +65,9 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header />
-        <input className="search" onChange={this.searchHandler} onSubmit={this.handleSubmit} placeholder="Search movies..." />
+          <form onSubmit={this.handleSubmit} name="search" method="get" action="#">
+            <input className="search" onChange={this.searchHandler} placeholder="Search movies..." />
+          </form>
         <main className="main">
           {this.state.rows}
         </main>
