@@ -11,7 +11,10 @@ To fire up the server run `yarn start` or `npm run start`.
 ### Movie Database Api Key
 
 ```
-In order for the app to work, you will need an API key. After you set up the key, all you need to do is create a .env.development file at the root of the project and store the key under the variable name REACT_APP_API_KEY. To read more on how to register for an api key, click [here](https://www.themoviedb.org/faq/api).
+In order for the app to work, you will need an API key. 
+After you set up the key, all you need to do is create a .env.development file 
+at the root of the project and store the key under the variable name REACT_APP_API_KEY. 
+To read more on how to register for an api key, click [here](https://www.themoviedb.org/faq/api).
 ```
 
 ### Todos
