@@ -1,0 +1,52 @@
+body {
+  background: #eee;
+}
+
+header {
+  width: 100%;
+  background: black;
+  padding: 10px;
+  color: white;
+}
+
+header img {
+  margin-right: 20px;
+}
+
+.header-inner {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+}
+
+input {
+  width: 100%;
+  display: block;
+  font-size: 22px;
+  line-height: 26px;
+  padding: 10px;
+  padding-left: 33px;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.movieRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 85%;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 9px;
+}
+
+.column {
+  flex: 1;
+}
