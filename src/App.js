@@ -56,9 +56,7 @@ class App extends Component {
   handleSubmit (e) {
     e.preventDefault();
     const searchTerm = e.target.value
-    if (e.key === 'Enter') {
-      this.performSearch(searchTerm)
-    }
+    this.performSearch(searchTerm)
   }
 
   render() {
