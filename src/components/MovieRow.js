@@ -11,7 +11,7 @@ class MovieRow extends Component {
     return (
       <article className="movieRow" key={this.props.movie.id}>
         <article className="column">
-          <img src={this.props.movie.poster_src} alt={`${ this.props.movie.title } Movie Poster`}/>
+        <img src={this.props.movie.poster_src ? this.props.movie.poster_src : false} alt={`${ this.props.movie.title } Movie Poster`}/>
         </article>
         <article className="column">
         <h3>{this.props.movie.title}</h3>
