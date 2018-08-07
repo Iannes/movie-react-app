@@ -20,11 +20,6 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 body {
   background: rgba(84, 107, 83, 0.6);
 }
-@media screen and (max-width: 890px) {
- body {
-  background: rgba(6, 6, 6, 0.6);
-}
-}
 
 header {
   width: 100%;
