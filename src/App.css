@@ -14,6 +14,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     margin: 0;
     padding: 0;
     font-weight: normal;
+    font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -43,7 +44,15 @@ header img {
   margin: auto;
 }
 
-input {
+h3 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  margin-bottom: 15px;
+  color: #077b48;
+}
+
+.search {
   width: 100%;
   display: block;
   font-size: 22px;
@@ -55,14 +64,29 @@ input {
   z-index: 1;
 }
 
-input:focus {
+.search:focus {
   outline: 0;
+}
+
+input[type="button"] {
+  margin-top: 29px;
+  padding: 10px 30px;
+  border-radius: 9px;
+  text-transform: capitalize;
+  width: 200px;
+  transition: all .4s ease-in-out;
+}
+
+input[type="button"]:hover {
+  background: #01d376;
+  border-color: #01d376;
+  color: white;
 }
 
 main.main {
   position: relative;
   top: 200px;
-  width: 65%;
+  width: 60%;
   margin: auto;
 }
 

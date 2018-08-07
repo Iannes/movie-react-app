@@ -6,7 +6,7 @@ export const  Header = () => {
       <header>
         <article className="header-inner">
           <img width="75"src="images/logo.svg" alt="Movie Database Logo"/>
-          <h2>Movies</h2>
+          <h2>MoviesDB Search</h2>
         </article>
       </header>
     )

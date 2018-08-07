@@ -11,7 +11,6 @@ class App extends Component {
     this.performSearch('wonder')
     this.state = {}
     this.searchHandler = this.searchHandler.bind(this)
-
   }
 
   performSearch(searchTerm) {
@@ -48,7 +47,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header />
-        <input onChange={this.searchHandler} placeholder="Search movies..." />
+        <input className="search" onChange={this.searchHandler} placeholder="Search movies..." />
         <main className="main">
           {this.state.rows}
         </main>
