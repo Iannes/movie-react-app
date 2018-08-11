@@ -8,10 +8,15 @@ class App extends Component {
   constructor(props) {
 
     super(props)
-    this.performSearch('wonder')
-    this.state = {}
+
+    this.state = { isLoading: false }
     this.searchHandler = this.searchHandler.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  componentDidMount() {
+    this.setState({ isLoading: true })
+    this.performSearch('a space')
   }
 
   performSearch(searchTerm) {
@@ -41,7 +46,7 @@ class App extends Component {
               }
               if(movieRows ) {
 
-                this.setState({ rows: movieRows})
+                this.setState({ rows: movieRows, isLoading: false})
               }
               // use array to set state
             })
@@ -60,6 +65,13 @@ class App extends Component {
   }
 
   render() {
+
+    const { isLoading } = this.state;
+
+    if (isLoading) {
+      return <p class="loading">Loading ...</p>
+    }
+
     return (
       <React.Fragment>
         <Header />
