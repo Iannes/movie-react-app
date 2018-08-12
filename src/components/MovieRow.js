@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 
 class MovieRow extends Component {
 
   viewMovie() {
-
     const singleUrl = `https://www.themoviedb.org/movie/${this.props.movie.id}`
     window.location.href = singleUrl
   }
@@ -11,7 +11,7 @@ class MovieRow extends Component {
     return (
       <article className="movieRow" key={this.props.movie.id}>
         <article className="column">
-        <img src={this.props.movie.poster_src ? this.props.movie.poster_src : 'N/Alazyg '} alt={`${ this.props.movie.title } Movie Poster`}/>
+        <img src={this.props.movie.poster_src ? this.props.movie.poster_src : 'N/A '} alt={`${ this.props.movie.title } Movie Poster`}/>
         </article>
         <article className="column">
         <h3>{this.props.movie.title}</h3>
@@ -22,5 +22,7 @@ class MovieRow extends Component {
     )
   }
 }
+
+MovieRow.propTypes = {movie: PropTypes.object}
 
 export default MovieRow;

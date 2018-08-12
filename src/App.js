@@ -6,9 +6,7 @@ require('dotenv').config()
 
 class App extends Component {
   constructor(props) {
-
     super(props)
-
     this.state = { isLoading: false }
     this.searchHandler = this.searchHandler.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -16,7 +14,7 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true })
-    this.performSearch('a space')
+    this.performSearch('a space odyssey')
   }
 
   performSearch(searchTerm) {
@@ -65,13 +63,10 @@ class App extends Component {
   }
 
   render() {
-
     const { isLoading } = this.state;
-
     if (isLoading) {
-      return <p class="loading">Loading ...</p>
+      return <p className="loading">Loading ...</p>
     }
-
     return (
       <React.Fragment>
         <Header />
@@ -87,3 +82,4 @@ class App extends Component {
 }
 
 export default App;
+
